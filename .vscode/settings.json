@@ -8,7 +8,7 @@
     },
     "jenkins-runner.hostConfigs": {
       "jenkins-master": {
-        "url": "http://43.204.109.122:8080",
+        "url": "http://13.233.115.116:8080",
         "user": "kanwarsaad",
         "password": "12345",
         "useCrumbIssuser": true
