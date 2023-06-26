@@ -66,20 +66,20 @@ pipeline {
             }
         }
         
-        // stage('Updating Kubernetes Deployment file') {
-        //     steps {
-        //         script {
-        //             sh """
-        //             //   cat frontenddeploy.yml
-        //             //   sed -i "s/${APP_NAME}.*/${APP_NAME}:${IMAGE_TAG}/g" frontenddeploy.yml
-        //             //   cat frontenddeploy.yml
-        //               cat frontenddeploy.yml
-        //               sed -i "s|image: ${IMAGE_NAME}.*|image: ${IMAGE_NAME}:${IMAGE_TAG}|g" frontenddeploy.yml
-        //               cat frontenddeploy.yml
-        //             """
-        //         }
-        //     }
-        // }
+//         // stage('Updating Kubernetes Deployment file') {
+//         //     steps {
+//         //         script {
+//         //             sh """
+//         //             //   cat frontenddeploy.yml
+//         //             //   sed -i "s/${APP_NAME}.*/${APP_NAME}:${IMAGE_TAG}/g" frontenddeploy.yml
+//         //             //   cat frontenddeploy.yml
+//         //               cat frontenddeploy.yml
+//         //               sed -i "s|image: ${IMAGE_NAME}.*|image: ${IMAGE_NAME}:${IMAGE_TAG}|g" frontenddeploy.yml
+//         //               cat frontenddeploy.yml
+//         //             """
+//         //         }
+//         //     }
+//         // }
         
            stage('Updating Kubernetes Deployment file') {
     steps {
@@ -104,11 +104,11 @@ pipeline {
                       git commit -m "Update the deployment file"
                     """
                     withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
-                        sh "git push https://github.com/kanwarsaadali/gitsops-argo-CD.git main"  
-                    //     sh "git pull origin main"
-                    //     sh "git add ."
-                    //     sh "git commit -m 'Merge remote changes'"
-                    //     sh "git push origin main"
+                        sh "git push https://github.com/kanwarsaadali/bazar-argocd.git main"  
+                        // sh "git pull origin main"
+                        // sh "git add ."
+                        // sh "git commit -m 'Merge remote changes'"
+                        // sh "git push origin main"
                     }
                 }
             }
