@@ -4,7 +4,7 @@ const productService = createApi({
     reducerPath: 'products',
     tagTypes: 'products',
     baseQuery: fetchBaseQuery({
-        baseUrl: 'http://a8c0fed7f13334e3c98534becdae912f-2084228010.ap-south-1.elb.amazonaws.com/api/',
+        baseUrl: 'http://localhost:8000/api/',
         prepareHeaders: (headers, {getState}) => {
             const reducers = getState();
             const token = reducers?.authReducer?.adminToken;
