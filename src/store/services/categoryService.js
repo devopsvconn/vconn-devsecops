@@ -4,7 +4,7 @@ const categoryService = createApi({
   reducerPath: "category",
   tagTypes: "categories",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:8000/api/",
+    baseUrl: "http://saad-env.eba-b8ntatks.ap-south-1.elasticbeanstalk.com/api/",
     prepareHeaders: (headers, { getState }) => {
       const reducers = getState();
       const token = reducers?.authReducer?.adminToken;
