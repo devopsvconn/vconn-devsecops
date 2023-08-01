@@ -4,7 +4,7 @@ const userOrdersService = createApi({
   reducerPath: "user-orders",
   tagTypes: "orders",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://52.66.197.179:32001/api/",
+    baseUrl: "a1188382a7467456694b3b4427a216b1-700100809.ap-south-1.elb.amazonaws.com",
     prepareHeaders: (headers, { getState }) => {
       const reducers = getState();
       const token = reducers?.authReducer?.userToken;
