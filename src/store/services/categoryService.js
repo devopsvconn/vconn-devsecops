@@ -4,7 +4,7 @@ const categoryService = createApi({
   reducerPath: "category",
   tagTypes: "categories",
   baseQuery: fetchBaseQuery({
-    baseUrl: "",
+    baseUrl: "http://10.1.113.249/api/",
     prepareHeaders: (headers, { getState }) => {
       const reducers = getState();
       const token = reducers?.authReducer?.adminToken;
