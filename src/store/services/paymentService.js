@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 const paymentService = createApi({
   reducerPath: "payment",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://10.1.113.248/api/",
+    baseUrl: "http://10.1.113.249/api/",
     prepareHeaders: (headers, { getState }) => {
       const reducers = getState();
       const token = reducers?.authReducer?.userToken;
