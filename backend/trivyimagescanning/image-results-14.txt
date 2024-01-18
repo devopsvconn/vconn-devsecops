@@ -1,0 +1,92 @@
+
+devopsvconn/devsecops-pipeline-backend-demo:latest (alpine 3.19.0)
+==================================================================
+Total: 4 (UNKNOWN: 0, LOW: 0, MEDIUM: 4, HIGH: 0, CRITICAL: 0)
+
+┌────────────┬───────────────┬──────────┬────────┬───────────────────┬───────────────┬───────────────────────────────────────────────────────────┐
+│  Library   │ Vulnerability │ Severity │ Status │ Installed Version │ Fixed Version │                           Title                           │
+├────────────┼───────────────┼──────────┼────────┼───────────────────┼───────────────┼───────────────────────────────────────────────────────────┤
+│ libcrypto3 │ CVE-2023-6129 │ MEDIUM   │ fixed  │ 3.1.4-r2          │ 3.1.4-r3      │ openssl: POLY1305 MAC implementation corrupts vector      │
+│            │               │          │        │                   │               │ registers on PowerPC                                      │
+│            │               │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2023-6129                 │
+│            ├───────────────┤          │        │                   ├───────────────┼───────────────────────────────────────────────────────────┤
+│            │ CVE-2023-6237 │          │        │                   │ 3.1.4-r4      │ openssl: Excessive time spent checking invalid RSA public │
+│            │               │          │        │                   │               │ keys                                                      │
+│            │               │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2023-6237                 │
+├────────────┼───────────────┤          │        │                   ├───────────────┼───────────────────────────────────────────────────────────┤
+│ libssl3    │ CVE-2023-6129 │          │        │                   │ 3.1.4-r3      │ openssl: POLY1305 MAC implementation corrupts vector      │
+│            │               │          │        │                   │               │ registers on PowerPC                                      │
+│            │               │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2023-6129                 │
+│            ├───────────────┤          │        │                   ├───────────────┼───────────────────────────────────────────────────────────┤
+│            │ CVE-2023-6237 │          │        │                   │ 3.1.4-r4      │ openssl: Excessive time spent checking invalid RSA public │
+│            │               │          │        │                   │               │ keys                                                      │
+│            │               │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2023-6237                 │
+└────────────┴───────────────┴──────────┴────────┴───────────────────┴───────────────┴───────────────────────────────────────────────────────────┘
+
+Node.js (node-pkg)
+==================
+Total: 12 (UNKNOWN: 0, LOW: 0, MEDIUM: 10, HIGH: 2, CRITICAL: 0)
+
+┌─────────────────────────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────────┬──────────────────────────────────────────────────────────────┐
+│           Library           │ Vulnerability  │ Severity │ Status │ Installed Version │    Fixed Version    │                            Title                             │
+├─────────────────────────────┼────────────────┼──────────┼────────┼───────────────────┼─────────────────────┼──────────────────────────────────────────────────────────────┤
+│ jsonwebtoken (package.json) │ CVE-2022-23539 │ MEDIUM   │ fixed  │ 8.5.1             │ 9.0.0               │ Unrestricted key type could lead to legacy keys usagen       │
+│                             │                │          │        │                   │                     │ https://avd.aquasec.com/nvd/cve-2022-23539                   │
+│                             │                │          │        │                   │                     │                                                              │
+│                             │                │          │        │                   │                     │                                                              │
+│                             │                │          │        │                   │                     │                                                              │
+│                             ├────────────────┤          │        │                   │                     ├──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-23540 │          │        │                   │                     │ Insecure default algorithm in jwt.verify() could lead to     │
+│                             │                │          │        │                   │                     │ signature validation bypass                                  │
+│                             │                │          │        │                   │                     │ https://avd.aquasec.com/nvd/cve-2022-23540                   │
+│                             │                │          │        │                   │                     │                                                              │
+│                             │                │          │        │                   │                     │                                                              │
+│                             │                │          │        │                   │                     │                                                              │
+│                             │                │          │        │                   │                     │                                                              │
+│                             ├────────────────┤          │        │                   │                     ├──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-23541 │          │        │                   │                     │ Insecure implementation of key retrieval function could lead │
+│                             │                │          │        │                   │                     │ to Forgeable Public/Private Tokens...                        │
+│                             │                │          │        │                   │                     │ https://avd.aquasec.com/nvd/cve-2022-23541                   │
+│                             │                │          │        │                   │                     │                                                              │
+│                             │                │          │        │                   │                     │                                                              │
+│                             │                │          │        │                   │                     │                                                              │
+│                             │                │          │        │                   │                     │                                                              │
+├─────────────────────────────┼────────────────┼──────────┤        ├───────────────────┼─────────────────────┼──────────────────────────────────────────────────────────────┤
+│ nth-check (package.json)    │ CVE-2021-3803  │ HIGH     │        │ 1.0.2             │ 2.0.1               │ inefficient regular expression complexity                    │
+│                             │                │          │        │                   │                     │ https://avd.aquasec.com/nvd/cve-2021-3803                    │
+│                             │                │          │        │                   │                     │                                                              │
+│                             │                │          │        │                   │                     │                                                              │
+│                             │                │          │        │                   │                     │                                                              │
+├─────────────────────────────┼────────────────┼──────────┤        ├───────────────────┼─────────────────────┼──────────────────────────────────────────────────────────────┤
+│ postcss (package.json)      │ CVE-2023-44270 │ MEDIUM   │        │ 7.0.39            │ 8.4.31              │ An issue was discovered in PostCSS before 8.4.31. The        │
+│                             │                │          │        │                   │                     │ vulnerability af ......                                      │
+│                             │                │          │        │                   │                     │ https://avd.aquasec.com/nvd/cve-2023-44270                   │
+│                             │                │          │        │                   │                     │                                                              │
+│                             │                │          │        │                   │                     │                                                              │
+│                             │                │          │        │                   │                     │                                                              │
+│                             │                │          │        │                   │                     │                                                              │
+├─────────────────────────────┼────────────────┤          │        ├───────────────────┼─────────────────────┼──────────────────────────────────────────────────────────────┤
+│ semver (package.json)       │ CVE-2022-25883 │          │        │ 7.0.0             │ 7.5.2, 6.3.1, 5.7.2 │ nodejs-semver: Regular expression denial of service          │
+│                             │                │          │        │                   │                     │ https://avd.aquasec.com/nvd/cve-2022-25883                   │
+│                             │                │          │        │                   │                     │                                                              │
+│                             │                │          │        │                   │                     │                                                              │
+│                             │                │          │        │                   │                     │                                                              │
+└─────────────────────────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────────┴──────────────────────────────────────────────────────────────┘
+
+/app/.env (secrets)
+===================
+Total: 1 (UNKNOWN: 0, LOW: 0, MEDIUM: 0, HIGH: 0, CRITICAL: 1)
+
+CRITICAL: Stripe (stripe-secret-token)
+════════════════════════════════════════
+Stripe Secret Key
+────────────────────────────────────────
+ /app/.env:4 (added by 'COPY . . # buildkit')
+────────────────────────────────────────
+   2   URL=mongodb+srv://shop:shop@kanwarclouddatabases.cvfaeoc.mongodb.net/?retryWrites=true&w=majority
+   3   JWT_SECRET=mystrongjwtsecret
+   4 [ STRIPE_KEY=****************************************8SMXVchBhiI8ZM1h5q1R7JmoVBdFtcFzci734hqJxEqGo1prtOpMG4lEv006aIx04pS
+   5   # CLIENT=http://localhost:3002
+────────────────────────────────────────
+
+
